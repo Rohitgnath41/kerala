@@ -1,0 +1,105 @@
+/* /* #navbarScrollingDropdown{
+    color: whitesmoke;
+}
+#card{
+    transition: .5s ease-in;
+}
+#card:hover{
+    transform: scale(1.02);
+/* } */
+/* body { */ 
+    /* background-color: #f8f9fa; /* Light background for contrast */
+  /* }
+   */
+  /* #card {
+    overflow: hidden; Prevents overflow for images */
+  /* } */
+  
+  /* .card-img-top {
+    height: 200px; /* Fixed height for images */
+    /* object-fit: cover; Ensures images cover the space */ 
+  /* }
+  
+  .text-primary {
+    color: #0914de; Bootstrap primary color */
+  /* } */
+
+  /* .text-muted {
+    color: #7165b2; /* Bootstrap muted text color */
+  /* } */
+  /* CardsKerala.css */
+
+body {
+    background-color: #f8f9fa; /* Light background for better contrast */
+    font-family: 'Arial', sans-serif; /* A clean font for a professional look */
+  }
+  
+  /* Container styling */
+  .container {
+    padding: 2rem 1rem; /* Add padding to the container */
+  }
+  
+  /* Title styling */
+  h1 {
+    color: #007bff; /* Bootstrap primary color */
+    font-size: 2.5rem; /* Larger font for the title */
+    font-weight: bold; /* Bold title */
+    margin-bottom: 2rem; /* Space below the title */
+  }
+  
+  /* Search input styling */
+  input[type="text"] {
+    border-radius: 25px; /* Rounded corners for the search box */
+    border: 2px solid #007bff; /* Blue border */
+    padding: 10px 20px; /* Add padding inside the input */
+    width: 100%; /* Full width */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+  }
+  
+  input[type="text"]:focus {
+    border-color: #0056b3; /* Darker blue on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  /* Card styling */
+  .card {
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure corners are rounded on images */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+  }
+  
+  /* Card image styling */
+  .card-img-top {
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the image properly */
+  }
+  
+  /* Card title styling */
+  .card-title {
+    font-size: 1.5rem; /* Larger font for titles */
+    color: #007bff; /* Bootstrap primary color */
+  }
+  
+  /* Card text styling */
+  .card-text {
+    font-size: 0.9rem; /* Slightly smaller font */
+    color: #6c757d; /* Muted color */
+  }
+  
+  /* Button styling */
+  .btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    border-color: #007bff; /* Ensure border matches */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3; /* Darker border on hover */
+  }
+  
+   

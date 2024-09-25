@@ -1,0 +1,35 @@
+.custom-navbar {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgb(22, 182, 83);
+  }
+
+  .logo {
+    width: 40px; /* Adjust logo size */
+    margin-right: 10px; /* Space between logo and text */
+  }
+  
+  .search-input {
+    border-radius: 20px; /* Rounded corners for the search bar */
+    border: 1px solid #ced4da; /* Border styling */
+  }
+  
+  .search-button {
+    border-radius: 20px; /* Rounded corners for the search button */
+  }
+  
+  .search-button:hover {
+    background-color: #ffffff; /* Button hover effect */
+  }
+  
+  .nav-link {
+    transition: color 0.3s; /* Smooth transition for link color */
+  }
+  
+  .nav-link:hover {
+    color: #ffdd57; /* Change color on hover */
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa; /* Change background on hover */
+  }
+  
