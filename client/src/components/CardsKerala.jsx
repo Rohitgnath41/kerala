@@ -270,22 +270,17 @@
 // }
 
 // export default CardsKerala;
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./CardsKerala.css";
+import CommentContext from "./ComponentProvider";
 
 function CardsKerala() {
-  // Search state
-  let [search, setSearch] = useState("");
 
-  // Search function
-  let searchFun = (event) => {
-    setSearch(event.target.value);
-  };
-
+  const {comment,setComment} = useContext(CommentContext)
   const data = [
     {
       id: 1,
@@ -347,21 +342,10 @@ function CardsKerala() {
 
   return (
     <Container className="mt-5">
-      {/* Searchbox */}
-      <Row className="mb-4">
-        <Col md={8} className="mx-auto">
-          <input
-            type="text"
-            placeholder="Search Here"
-            className="form-control mt-3"
-            onChange={searchFun}
-          />
-        </Col>
-      </Row>
 
       {/* Title */}
       <h1 className="text-center mb-4 text-primary fw-bold">
-        The Beauty Of God's Own Country
+        keralatourism
       </h1>
 
       {/* Cards */}
@@ -371,7 +355,7 @@ function CardsKerala() {
             .filter((sear) => {
               return sear.title
                 .toLocaleLowerCase()
-                .match(search.toLocaleLowerCase());
+                .match(comment.toLocaleLowerCase());
             })
             .map((list) => {
               return (

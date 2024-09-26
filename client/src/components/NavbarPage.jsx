@@ -244,6 +244,9 @@ import { Button, Container, Form, Nav, Navbar, NavDropdown, Modal } from "react-
 import { FaHome, FaUserCircle, FaSearch } from "react-icons/fa"; // Importing icons
 import Register from "./Register";
 import Login from "./Login";
+import { useContext } from "react";
+import{usestate} from 'react';
+import CommentContext from "./ComponentProvider";
 
 function NavbarPage() {
   const [show, setShow] = useState(false);
@@ -252,6 +255,17 @@ function NavbarPage() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const toggleModal = () => setIsRegister((prev) => !prev);
+
+
+  const {setComment} = useContext(CommentContext)
+  const [handle,setHandle] = useState("")
+
+  let serachFun=(event)=>{
+    setHandle(event.target.value)
+  }
+  let handleFun =()=>{
+    setComment(handle)
+  }
 
   return (
     <>
@@ -283,21 +297,23 @@ function NavbarPage() {
               </NavDropdown>
               <Nav.Link href="/AboutPage" className="text-white">About Us</Nav.Link>
             </Nav>
-            <Form className="d-flex" aria-label="Search Form">
+            <Form className="d-flex" aria-label="Search Form" onSubmit={(e) => e.preventDefault()}>
               {/* Uncomment and customize search input and button as needed */}
-              {/* <Form.Control
+              <Form.Control
                 type="search"
                 placeholder="Search"
                 className="me-2" // Add margin to input
-                aria-label="Search"
-              /> */}
-              {/* <Button variant="light" type="submit">
-                <FaSearch /> {/* Search icon */}
-              {/* </Button> */}
+                aria-label="Search" onChange={serachFun}
+              /> 
+          <Button variant="light" type="submit" onClick={handleFun}> 
+                {/* <FaSearch /> 
+                          search icon */}
+                          Search
+              </Button>
             </Form>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
+      </Navbar> 
 
       {/* Modal Box */}
       <Modal show={show} onHide={handleClose}>
